@@ -40,7 +40,6 @@ function InicioComponenete() {
                     </a>
                 </div>
                 <div class="column2">
-                    <img src="./img/Inicio/Inicio.png" alt="Imagen" />
                 </div>
             </div>
             <div class="contenedor2">
