@@ -1,4 +1,7 @@
+import $ from "jquery";
 import React, { useState } from 'react';
+let url = "https://kapitalizacionpolitik.maxapex.net/apex/sgk/api/conexiones/wordpress/WEB"
+
 
 function InicioComponenete() {
     const [cedula, setCedula] = useState('');
@@ -15,9 +18,28 @@ function InicioComponenete() {
     const [problemas, setProblemas] = useState('');
 
     // Función para manejar el envío del formulario
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log('Formulario enviado');
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        
+        //event.preventDefault();
+        //console.log('Formulario enviado');
+        let form = $(e.target);
+        $.ajax({
+            type: "POST",
+            url: form.attr("action"),
+            data: form.serialize(),
+            //data: arraryfinal,
+            success(data) {
+              console.log('Datos enviados.', '');
+            },
+            error(data) {
+              console.log('Datos enviados.', '');
+            }
+          })
+          console.log(form.attr("action"))
+          console.log(form.serialize())
+          
+
     };
     return (
         <>
@@ -75,11 +97,12 @@ function InicioComponenete() {
                     </div>
                     <div className="columna color1">
                         <div className="espacioFormu">
-                            <form onSubmit={handleSubmit} className="formulario">
+                            <form action={url} method="post" onSubmit={(ev) => handleSubmit(ev)}  className="formulario">
                                 <h2>Formulario</h2>
                                 <div>
                                     <label lassName="etiqueta">Cédula:</label>
                                     <input
+                                        name="cedula"
                                         type="text"
                                         value={cedula}
                                         onChange={(e) => setCedula(e.target.value)}
@@ -87,6 +110,7 @@ function InicioComponenete() {
                                     />
                                     <label lassName="etiqueta">Género:</label>
                                     <select
+                                        name="genero"
                                         value={genero}
                                         onChange={(e) => setGenero(e.target.value)}
                                         className="entrada dos"
@@ -100,6 +124,7 @@ function InicioComponenete() {
                                 <div>
                                     <label lassName="etiqueta">Nombre:</label>
                                     <input
+                                        name="nombre"
                                         type="text"
                                         value={nombre}
                                         onChange={(e) => setNombre(e.target.value)}
@@ -116,6 +141,7 @@ function InicioComponenete() {
                                 <div>
                                     <label lassName="etiqueta">Celular:</label>
                                     <input
+                                        name="celular"
                                         type="text"
                                         value={celular}
                                         onChange={(e) => setCelular(e.target.value)}
@@ -123,6 +149,7 @@ function InicioComponenete() {
                                     />
                                     <label lassName="etiqueta">Email:</label>
                                     <input
+                                        name="email"
                                         type="email"
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
@@ -132,6 +159,7 @@ function InicioComponenete() {
                                 <div>
                                     <label lassName="etiqueta">Provincia:</label>
                                     <select
+                                        name="provincia"
                                         value={provincia}
                                         onChange={(e) => setProvincia(e.target.value)}
                                         className="entrada siete"
@@ -141,6 +169,7 @@ function InicioComponenete() {
                                     </select>
                                     <label lassName="etiqueta">Cantón:</label>
                                     <select
+                                        name="canton"
                                         value={canton}
                                         onChange={(e) => setCanton(e.target.value)}
                                         className="entrada ocho"
@@ -152,6 +181,7 @@ function InicioComponenete() {
                                 <div>
                                     <label lassName="etiqueta">Parroquia:</label>
                                     <select
+                                        name="parroquia"
                                         value={parroquia}
                                         onChange={(e) => setParroquia(e.target.value)}
                                         className="entrada nueve"
@@ -161,6 +191,7 @@ function InicioComponenete() {
                                     </select>
                                     <label lassName="etiqueta">Barrio:</label>
                                     <input
+                                        name="barrio"
                                         type="text"
                                         value={barrio}
                                         onChange={(e) => setBarrio(e.target.value)}
@@ -170,6 +201,7 @@ function InicioComponenete() {
                                 <div>
                                     <label lassName="etiqueta">Eje de gestión:</label>
                                     <select
+                                        name="ejeGestion"
                                         value={ejeGestion}
                                         onChange={(e) => setEjeGestion(e.target.value)}
                                         className="entrada once"
@@ -181,6 +213,7 @@ function InicioComponenete() {
                                 <div>
                                     <label lassName="etiqueta">Problemas:</label>
                                     <textarea
+                                        name="problemas"
                                         value={problemas}
                                         onChange={(e) => setProblemas(e.target.value)}
                                         className="entrada doce"
