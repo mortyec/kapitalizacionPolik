@@ -8,7 +8,7 @@ function InicioComponenete() {
     const [genero, setGenero] = useState('');
     const [edad, setEdad] = useState('');
     const [nombre, setNombre] = useState('');
-    const [celular, setCelular] = useState('');
+    const [celular, setCelular] = useState(''); 
     const [email, setEmail] = useState('');
     const [provincia, setProvincia] = useState('');
     const [canton, setCanton] = useState('');
@@ -92,7 +92,7 @@ function InicioComponenete() {
             <div className="bloque-container">
                 <div className="fila">
                     <div className="columna">
-                        <img src="./img/Bloques/imagen2.jpg" alt="Imagen 1" />
+                        <img src="./img/Bloques/imagen3.jpg" alt="Imagen 1" />
                     </div>
                     <div className="columna color1">
                         <div className="espacioFormu">
@@ -244,7 +244,7 @@ function InicioComponenete() {
                         </div>
                     </div>
                     <div className="columna">
-                        <img src="./img/Bloques/imagen3.jpg" alt="Imagen 2" />
+                        <img src="./img/Bloques/imagen2.jpg" alt="Imagen 2" />
                     </div>
                 </div>
                 <div className="fila">

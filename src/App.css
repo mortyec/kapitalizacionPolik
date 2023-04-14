@@ -36,11 +36,11 @@
 }
 
 .logoLateral {
-  background-image: url(../public/img/Navbar/logo.png);
+  background-image: url(../public/img/Navbar/logoPrueba.png);
   background-size: cover;
-  width: 35vw;
-  height: 5vw;
-  cursor: pointer;
+  width: 22vw;
+  height: 6vw;
+
 }
 
 .menuLateralActive {
@@ -179,9 +179,10 @@
   transition: opacity 0.5s;
 }
 .menuLateralActive .logoLateral {
-  background-image: url(../public/img/Navbar/logo.png);
-  width: 35vw;
-  height: 5vw;
+  background-image: url(../public/img/Navbar/logoPrueba.png);
+  width: 22vw;
+  height: 6vw;
+
 }
 .menuLateral {
   border-top: 1px solid #000;
@@ -200,10 +201,6 @@
   align-items: center;
 }
 
-.logo{
-  width: 7vw;
-
-}
 .contenedorLinks{
   display: flex;
 }
@@ -711,13 +708,13 @@ button[type="submit"]:hover {
 }
 
 .navbar-submenu.uno {
-  left: calc(36% + 0px);
+  left: calc(23% + 2px);
 }
 .navbar-submenu.dos {
-  left: calc(42% + 1px);
+  left: calc(29% + 5px);
 }
 .navbar-submenu.tres {
-  left: calc(48% + 5px);
+  left: calc(35% + 6px);
 }
 
 
