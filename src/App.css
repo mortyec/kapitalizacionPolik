@@ -38,9 +38,9 @@
 .logoLateral {
   background-image: url(../public/img/Navbar/logoPrueba.png);
   background-size: cover;
-  width: 22vw;
-  height: 6vw;
-
+  margin-left: 3vw;
+  width: 15vw;
+  height: 4vw;
 }
 
 .menuLateralActive {
@@ -180,13 +180,12 @@
 }
 .menuLateralActive .logoLateral {
   background-image: url(../public/img/Navbar/logoPrueba.png);
-  width: 22vw;
-  height: 6vw;
-
+  width: 15vw;
+  height: 4vw;
 }
 .menuLateral {
   border-top: 1px solid #000;
-  background-image: linear-gradient(to right, #052c8b, #041337);
+  background-image: linear-gradient(to right,#051c2c ,#04143a);
   position: fixed;
   top: 0;
   right: 0;
@@ -203,34 +202,47 @@
 
 .contenedorLinks{
   display: flex;
+  padding-left: 55vw;
+}
+
+.entrada{
+   width: 90%;
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+select.entrada {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 95%;
 }
 
 .container {
   display: flex; 
-  background-image: url(../public/img/Inicio/Kapital.jpg); 
-  background-size: cover;
-  background-repeat: no-repeat;
+ 
   height: 75vh;
   padding-top: 5vw;
 }
 
 
 .column1 {
-  padding-top: 7vw;
-  padding-left: 4vw;
-  flex: 3; 
-  padding-right: 8vw; 
+  width: 50%
 }
-
+.column1 img{
+  width: 100%;
+  height: 100%;
+}
 
 .column2 {
-  flex: 2; 
+  width: 50%;
 }
 
-
-.column2 img {
-  max-width: 95%; 
+.column2 video{
+  width: 100%;
+  height: 100%;
 }
+
 
 .iniciotitulo{
   font-family: 'PyIta', sans-serif;
@@ -257,7 +269,7 @@
 
 /* Estilo del contenedor */
 .contenedor2 {
-  background-color: #051c2c;
+  background-color: #031725;
   height: 15vh;
   display: flex;
 }
@@ -333,6 +345,9 @@
 
 .columna.color1{
   background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
 }
 
 .columna.color2{
@@ -383,76 +398,15 @@ form h2{
   /* Espacio entre las etiquetas y los inputs */
 }
 
-.entrada {
-  padding: 5px;
-  margin-top: 5px;
-  /* Espacio entre las etiquetas y los inputs */
-  border: 1px solid #ccc;
-  /* Borde alrededor de los inputs */
-  border-radius: 4px;
-  /* Bordes redondeados de los inputs */
+.contenedorFilasFormulario{
+  display: flex;
+  width: 100%;
 }
-.entrada.uno {
-  width: 15vw;
-  margin-left: 4vw;
-  margin-right: 2vw;
+.formDerecha{
+  width: 50%;
 }
-.entrada.dos {
-  width: 16.2vw;
-  margin-left: 0vw;
-  
-}
-.entrada.tres {
-  width: 15vw;
-  margin-left: 3.4vw;
-  margin-right: 2vw;
-}
-.entrada.cuatro {
-  width: 15.4vw;
-  margin-left: 1vw;
-}
-.entrada.cinco {
-  width: 15vw;
-  margin-left: 4vw;
-  margin-right: 2vw;
-}
-.entrada.seis {
-  width: 15.4vw;
-  margin-left: 0.9vw;
-}
-.entrada.siete {
-  width: 15.7vw;
-  margin-left: 3vw;
-  margin-right: 2vw;
-}
-.entrada.ocho {
-  width: 16.2vw;
-  margin-left: 0.1vw;
-}
-.entrada.nueve {
-  width: 15.7vw;
-  margin-left: 2.8vw;
-  margin-right: 2vw;
-}
-.entrada.diez {
-  width: 15.4vw;
-  margin-left: 0.7vw;
-}
-.entrada.once {
-  width: 15.6vw;
-  margin-left: 0.8vw;
-}
-.entrada.doce {
-  width: 36.6vw;
-  height: 6vw;
-  margin-left: 2.5vw;
-}
-select.entrada {
-  /* Estilos específicos para los select */
-  padding: 5px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.formizquierda{
+  width: 50%;
 }
 
 button[type="submit"] {
@@ -474,7 +428,7 @@ button[type="submit"]:hover {
 
 .site-footer
 {
-  background-image: linear-gradient(to right, #052c8b, #041337);
+  background-image: linear-gradient(to right, #04143a, #010b22);
   padding:45px 0 20px;
   font-size:15px;
   line-height:24px;
@@ -701,20 +655,20 @@ button[type="submit"]:hover {
   display: none;
   min-width: 10vw;
   padding: 10px;
-  background-color: #051c2c;
+  background-color: #010d15;
   border-radius: 10px 10px 10px 10px;
   border-top: 3px solid #2150fb;
   top: calc(63% + 8px);
 }
 
 .navbar-submenu.uno {
-  left: calc(23% + 2px);
+  left: calc(73% + 0px);
 }
 .navbar-submenu.dos {
-  left: calc(29% + 5px);
+  left: calc(79% + 5px);
 }
 .navbar-submenu.tres {
-  left: calc(35% + 6px);
+  left: calc(85% + 7px);
 }
 
 

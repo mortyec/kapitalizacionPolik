@@ -1,14 +1,19 @@
 import $ from "jquery";
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 let url = "https://kapitalizacionpolitik.maxapex.net/apex/sgk/api/conexiones/wordpress/WEB"
 
 
 function InicioComponenete() {
+    const boxMarketingRef = useRef(null);
+    const handleVideoClick = () => {
+        boxMarketingRef.current.scrollIntoView({ behavior: 'smooth' });
+      };
+
     const [cedula, setCedula] = useState('');
     const [genero, setGenero] = useState('');
     const [edad, setEdad] = useState('');
     const [nombre, setNombre] = useState('');
-    const [celular, setCelular] = useState(''); 
+    const [celular, setCelular] = useState('');
     const [email, setEmail] = useState('');
     const [provincia, setProvincia] = useState('');
     const [canton, setCanton] = useState('');
@@ -20,7 +25,7 @@ function InicioComponenete() {
     // Función para manejar el envío del formulario
     const handleSubmit = (e) => {
         e.preventDefault();
-        
+
         //event.preventDefault();
         //console.log('Formulario enviado');
         let form = $(e.target);
@@ -30,38 +35,32 @@ function InicioComponenete() {
             data: form.serialize(),
             //data: arraryfinal,
             success(data) {
-              console.log('Datos enviados.', '');
+                console.log('Datos enviados.', '');
             },
             error(data) {
-              console.log('Datos enviados.', '');
+                console.log('Datos enviados.', '');
             }
-          })
-          console.log(form.attr("action"))
-          console.log(form.serialize())
-          
+        })
+        console.log(form.attr("action"))
+        console.log(form.serialize())
+
 
     };
     return (
         <>
             <div class="container">
                 <div class="column1">
-                    <p className="iniciotitulo">La próxima frontera en la eficiencia del riesgo</p>
-                    <p className="inicioDescripcion">A medida que los riesgos globales aumentan en frecuencia e impacto y persiste la incertidumbre económica, las funciones de riesgo dentro de la industria de servicios financieros deben continuar desarrollando talento para garantizar la resiliencia organizacional.</p>
-                    <a class='animated-arrow' href='./#'>
-                        <span class='the-arrow -left'>
-                            <span class='shaft'></span>
-                        </span>
-                        <span class='main'>
-                            <span class='text'>
-                                Aumentar la eficiencia y la eficacia
-                            </span>
-                            <span class='the-arrow -right'>
-                                <span class='shaft'></span>
-                            </span>
-                        </span>
-                    </a>
+                    <img src="./img/Inicio/Bukele.jpg" />
                 </div>
                 <div class="column2">
+                    <video
+                        src="./img/Inicio/video1.mp4"
+                        autoPlay
+                        loop
+                        muted
+                    >
+                        Tu navegador no soporta la etiqueta de video HTML5.
+                    </video>
                 </div>
             </div>
             <div class="contenedor2">
@@ -94,120 +93,114 @@ function InicioComponenete() {
                     <div className="columna">
                         <img src="./img/Bloques/imagen3.jpg" alt="Imagen 1" />
                     </div>
-                    <div className="columna color1">
+                    <div className="columna color1 centrado">
                         <div className="espacioFormu">
-                            <form action={url} method="post" onSubmit={(ev) => handleSubmit(ev)}  className="formulario">
+                            <form action={url} method="post" onSubmit={(ev) => handleSubmit(ev)} className="formulario">
                                 <h2>Formulario</h2>
-                                <div>
-                                    <label lassName="etiqueta">Cédula:</label>
-                                    <input
-                                        name="cedula"
-                                        type="text"
-                                        value={cedula}
-                                        onChange={(e) => setCedula(e.target.value)}
-                                        className="entrada uno"
-                                    />
-                                    <label lassName="etiqueta">Género:</label>
-                                    <select
-                                        name="genero"
-                                        value={genero}
-                                        onChange={(e) => setGenero(e.target.value)}
-                                        className="entrada dos"
-                                    >
-                                        <option value="">Seleccione</option>
-                                        <option value="masculino">Masculino</option>
-                                        <option value="femenino">Femenino</option>
-                                    </select>
-
-                                </div>
-                                <div>
-                                    <label lassName="etiqueta">Nombre:</label>
-                                    <input
-                                        name="nombre"
-                                        type="text"
-                                        value={nombre}
-                                        onChange={(e) => setNombre(e.target.value)}
-                                        className="entrada tres"
-                                    />
-                                    <label lassName="etiqueta">Edad:</label>
-                                    <input
-                                        type="number"
-                                        value={edad}
-                                        onChange={(e) => setEdad(e.target.value)}
-                                        className="entrada cuatro"
-                                    />
-                                </div>
-                                <div>
-                                    <label lassName="etiqueta">Celular:</label>
-                                    <input
-                                        name="celular"
-                                        type="text"
-                                        value={celular}
-                                        onChange={(e) => setCelular(e.target.value)}
-                                        className="entrada cinco"
-                                    />
-                                    <label lassName="etiqueta">Email:</label>
-                                    <input
-                                        name="email"
-                                        type="email"
-                                        value={email}
-                                        onChange={(e) => setEmail(e.target.value)}
-                                        className="entrada seis"
-                                    />
-                                </div>
-                                <div>
-                                    <label lassName="etiqueta">Provincia:</label>
-                                    <select
-                                        name="provincia"
-                                        value={provincia}
-                                        onChange={(e) => setProvincia(e.target.value)}
-                                        className="entrada siete"
-                                    >
-                                        <option value="">Seleccione</option>
-                                        {/* Opciones de provincia */}
-                                    </select>
-                                    <label lassName="etiqueta">Cantón:</label>
-                                    <select
-                                        name="canton"
-                                        value={canton}
-                                        onChange={(e) => setCanton(e.target.value)}
-                                        className="entrada ocho"
-                                    >
-                                        <option value="">Seleccione</option>
-                                        {/* Opciones de cantón */}
-                                    </select>
-                                </div>
-                                <div>
-                                    <label lassName="etiqueta">Parroquia:</label>
-                                    <select
-                                        name="parroquia"
-                                        value={parroquia}
-                                        onChange={(e) => setParroquia(e.target.value)}
-                                        className="entrada nueve"
-                                    >
-                                        <option value="">Seleccione</option>
-                                        {/* Opciones de parroquia */}
-                                    </select>
-                                    <label lassName="etiqueta">Barrio:</label>
-                                    <input
-                                        name="barrio"
-                                        type="text"
-                                        value={barrio}
-                                        onChange={(e) => setBarrio(e.target.value)}
-                                        className="entrada diez"
-                                    />
-                                </div>
-                                <div>
-                                    <label lassName="etiqueta">Eje de gestión:</label>
-                                    <select
-                                        name="ejeGestion"
-                                        value={ejeGestion}
-                                        onChange={(e) => setEjeGestion(e.target.value)}
-                                        className="entrada once"
-                                    >
-                                        <option value="">Seleccione</option>
-                                        {/* Opciones de eje de gestión */}
-                                    </select>
+                                <div className="contenedorFilasFormulario">
+                                    <div className="formizquierda">
+                                        <label lassName="etiqueta">Cédula:</label>
+                                        <br /> <input
+                                            name="cedula"
+                                            type="text"
+                                            value={cedula}
+                                            onChange={(e) => setCedula(e.target.value)}
+                                            className="entrada"
+                                        /><br />
+                                        <label lassName="etiqueta">Nombre:</label>
+                                        <br /> <input
+                                            name="nombre"
+                                            type="text"
+                                            value={nombre}
+                                            onChange={(e) => setNombre(e.target.value)}
+                                            className="entrada espacioForm"
+                                        /><br />
+                                        <label lassName="etiqueta">Celular:</label>
+                                        <br />   <input
+                                            name="celular"
+                                            type="text"
+                                            value={celular}
+                                            onChange={(e) => setCelular(e.target.value)}
+                                            className="entrada espacioForm"
+                                        /><br />
+                                        <label lassName="etiqueta">Provincia:</label>
+                                        <br /><select
+                                            name="provincia"
+                                            value={provincia}
+                                            onChange={(e) => setProvincia(e.target.value)}
+                                            className="entrada espacioForm"
+                                        >
+                                            <option value="">Seleccione</option>
+                                            {/* Opciones de provincia */}
+                                        </select><br />
+                                        <label lassName="etiqueta">Parroquia:</label>
+                                        <br /><select
+                                            name="parroquia"
+                                            value={parroquia}
+                                            onChange={(e) => setParroquia(e.target.value)}
+                                            className="entrada espacioForm"
+                                        >
+                                            <option value="">Seleccione</option>
+                                            {/* Opciones de parroquia */}
+                                        </select><br />
+                                        <label lassName="etiqueta">Eje de gestión:</label>
+                                        <br />  <select
+                                            name="ejeGestion"
+                                            value={ejeGestion}
+                                            onChange={(e) => setEjeGestion(e.target.value)}
+                                            className="entrada espacioForm"
+                                        >
+                                            <option value="">Seleccione</option>
+                                            {/* Opciones de eje de gestión */}
+                                        </select><br />
+                                    </div>
+                                    <div className="formDerecha">
+                                        <label lassName="etiqueta">Género:</label>
+                                        <br />
+                                        <select
+                                            name="genero"
+                                            value={genero}
+                                            onChange={(e) => setGenero(e.target.value)}
+                                            className="entrada"
+                                        >
+                                            <option value="">Seleccione</option>
+                                            <option value="masculino">Masculino</option>
+                                            <option value="femenino">Femenino</option>
+                                        </select><br />
+                                        <label lassName="etiqueta">Edad:</label>
+                                        <br /> <input
+                                            type="number"
+                                            value={edad}
+                                            onChange={(e) => setEdad(e.target.value)}
+                                            className="entrada espacioForm"
+                                        /><br />
+                                        <label lassName="etiqueta">Email:</label>
+                                        <br /><input
+                                            name="email"
+                                            type="email"
+                                            value={email}
+                                            onChange={(e) => setEmail(e.target.value)}
+                                            className="entrada espacioForm"
+                                        /><br />
+                                        <label lassName="etiqueta">Cantón:</label>
+                                        <br /> <select
+                                            name="canton"
+                                            value={canton}
+                                            onChange={(e) => setCanton(e.target.value)}
+                                            className="entrada espacioForm"
+                                        >
+                                            <option value="">Seleccione</option>
+                                            {/* Opciones de cantón */}
+                                        </select><br />
+                                        <label lassName="etiqueta">Barrio:</label>
+                                        <br /><input
+                                            name="barrio"
+                                            type="text"
+                                            value={barrio}
+                                            onChange={(e) => setBarrio(e.target.value)}
+                                            className="entrada espacioForm"
+                                        /><br />
+                                    </div>
                                 </div>
                                 <div>
                                     <label lassName="etiqueta">Problemas:</label>
@@ -216,7 +209,7 @@ function InicioComponenete() {
                                         value={problemas}
                                         onChange={(e) => setProblemas(e.target.value)}
                                         className="entrada doce"
-                                    />
+                                    /><br /><br />
                                 </div>
                                 <button type="submit">Enviar</button>
                             </form>
