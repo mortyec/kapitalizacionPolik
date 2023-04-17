@@ -590,12 +590,23 @@ button[type="submit"]:hover {
   }
 }
 .containerfooter {
-  width: 100%;
-  max-width: 1170px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  /* width: 100%;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+  align-items: center;
+}
+
+.containerfooter img{
+  
+  width: 20vw;
+  height: auto;
 }
 
 .row {
