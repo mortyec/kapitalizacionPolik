@@ -76,7 +76,7 @@ function NavbarNormal() {
           <span></span> <span></span>{" "}
         </a>
         <div className="logoLateral" onClick={topFunction}></div>
-        <div className="contenedorLinks">
+       {/*  <div className="contenedorLinks">
           <Link to="/" onMouseEnter={handleMouseEnter1} onMouseLeave={handleMouseLeave1}>
             <p>Texto 1</p>
             {showSubmenu1 && (
@@ -110,7 +110,7 @@ function NavbarNormal() {
               </div>
             )}
           </Link>
-        </div>
+        </div> */}
       </div>
     </>
   );

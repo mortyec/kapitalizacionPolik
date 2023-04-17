@@ -7,7 +7,7 @@ function InicioComponenete() {
     const boxMarketingRef = useRef(null);
     const handleVideoClick = () => {
         boxMarketingRef.current.scrollIntoView({ behavior: 'smooth' });
-      };
+    };
 
     const [cedula, setCedula] = useState('');
     const [genero, setGenero] = useState('');
@@ -52,41 +52,34 @@ function InicioComponenete() {
                 <div class="column1">
                     <img src="./img/Inicio/Bukele.jpg" />
                 </div>
-                <div class="column2">
-                    <video
-                        src="./img/Inicio/video1.mp4"
-                        autoPlay
-                        loop
-                        muted
-                    >
-                        Tu navegador no soporta la etiqueta de video HTML5.
-                    </video>
-                </div>
+                {/* <div class="column2">
+                   <p className="textoPrincipal">El principal recurso de un politico son las personas</p>
+                </div> */}
             </div>
             <div class="contenedor2">
-                <div class="parteMenos">
+                {/* <div class="parteMenos">
                     <div class="descripcionInicio">PERSPECTIVAS DE TENDENCIA</div>
                 </div>
                 <div class="parte">
                     <div class="numero">1</div>
                     <div class="linea"></div>
-                    <div class="descripcion">Construyendo la oficina del futuro</div>
+                    <div class="descripcion"></div>
                 </div>
                 <div class="parte">
                     <div class="numero">2</div>
                     <div class="linea"></div>
-                    <div class="descripcion">El problema de TI de la empresa 'No es mi problema'</div>
+                    <div class="descripcion"></div>
                 </div>
                 <div class="parte">
                     <div class="numero">3</div>
                     <div class="linea"></div>
-                    <div class="descripcion">¿Qué es la IA generativa?</div>
+                    <div class="descripcion"></div>
                 </div>
                 <div class="parte">
                     <div class="numero">4</div>
                     <div class="linea"></div>
-                    <div class="descripcion">Acciones que los mejores CEOs están tomando en 2023</div>
-                </div>
+                    <div class="descripcion"></div>
+                </div> */}
             </div>
             <div className="bloque-container">
                 <div className="fila">
@@ -219,15 +212,15 @@ function InicioComponenete() {
                 <div className="fila">
                     <div className="columna color2">
                         <div className="espacio">
-                            <p className="tituloColumna">CEOs en ascenso: Lecciones del Foro de Liderazgo de McKinsey</p>
-                            <p>Prepararse para el rol de CEO puede ser un desafío y una recompensa. Estas ocho lecciones extraídas de más de 300 participantes del Foro de liderazgo de McKinsey y los directores ejecutivos que los asesoran beneficiarán a cualquier alto ejecutivo o aspirante a director ejecutivo.</p>
+                            <p className="tituloColumna">Metodología 4 Ps+(3x2)=32</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ipsum suspendisse ultrices gravida dictum fusce ut. Posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Tincidunt arcu non sodales neque sodales ut etiam sit amet. Felis imperdiet proin fermentum leo. Aliquam eleifend mi in nulla posuere sollicitudin aliquam. Sed ullamcorper morbi tincidunt ornare massa. Id neque aliquam vestibulum morbi blandit cursus.</p>
                             <a class='animated-arrowDos' href='./#'>
                                 <span class='the-arrowDos -leftDos'>
                                     <span class='shaftDos'></span>
                                 </span>
                                 <span class='mainDos'>
                                     <span class='textDos'>
-                                        Explore más información del McKinsey Quarterly
+                                        Conoce más
                                     </span>
                                     <span class='the-arrowDos -rightDos'>
                                         <span class='shaftDos'></span>
@@ -246,8 +239,8 @@ function InicioComponenete() {
                     </div>
                     <div className="columna color3">
                         <div className="espacio">
-                            <p className="tituloColumna">Mejores vidas y medios de subsistencia</p>
-                            <p>El sector social, el cuidado de la salud y las organizaciones del sector público del mundo son fundamentales para el bienestar de las personas y las comunidades. Durante más de 70 años, McKinsey ha trabajado junto a estas organizaciones, permitiendo que aquellos que hacen tanto bien en el mundo operen al más alto nivel.</p>
+                            <p className="tituloColumna">Vinculación Ciudadana<br />R+c1=k Voceros Naturales.</p>
+                            <p>La vinculación ciudadana activa, la representatividad y el capital político son elementos esenciales para la participación política efectiva, la voz de voceros naturales que representen genuinamente a la comunidad es relevante en el contexto político</p>
                             <a class='animated-arrow' href='./#'>
                                 <span class='the-arrow -left'>
                                     <span class='shaft'></span>
@@ -265,16 +258,19 @@ function InicioComponenete() {
                     </div>
                 </div>
                 <div className='blogTituloContenedor'>
-                    <p className='blogTitulo'>NUEVO EN EL BLOG DE KPITALIZACIÓN POLITIK</p>
+                    <p className='blogTitulo'>Big data. Balance ScoreCard. Kpi's</p>
                 </div>
                 <div className="blogconten-container">
                     <div className="columnBlog">
-                        <div className="image-container">
-                            <img
-                                className="imageBlog"
-                                src="./img/Bloques/imagen5.jpg" // URL de la imagen de fondo
-                                alt="Imagen 1"
-                            />
+                        <div className="video-container">
+                            <video
+                                src="./img/Bloques/video2.mp4"
+                                autoPlay
+                                loop
+                                muted
+                            >
+                                Tu navegador no soporta la etiqueta de video HTML5.
+                            </video>
                             <div className="overlay">
                                 <p className="textBlog">Descripción 1</p>
                             </div>
@@ -284,7 +280,7 @@ function InicioComponenete() {
                         <div className="image-container">
                             <img
                                 className="imageBlog"
-                                src="./img/Bloques/imagen6.jpg" // URL de la imagen de fondo
+                                src="./img/Bloques/imagen6.jpg"
                                 alt="Imagen 2"
                             />
                             <div className="overlay">
