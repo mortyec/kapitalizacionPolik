@@ -52,11 +52,20 @@ function InicioComponenete() {
                 <div class="column1">
                     <img src="./img/Inicio/Bukele.jpg" />
                 </div>
+                <video
+                                src="./img/Inicio/inicio.mp4"
+                                autoPlay
+                                loop
+                                muted
+                            >
+                                Tu navegador no soporta la etiqueta de video HTML5.
+                            </video>
                 {/* <div class="column2">
                    <p className="textoPrincipal">El principal recurso de un politico son las personas</p>
                 </div> */}
             </div>
             <div class="contenedor2">
+            
                 {/* <div class="parteMenos">
                     <div class="descripcionInicio">PERSPECTIVAS DE TENDENCIA</div>
                 </div>
@@ -239,7 +248,7 @@ function InicioComponenete() {
                     </div>
                     <div className="columna color3">
                         <div className="espacio">
-                            <p className="tituloColumna">Vinculación Ciudadana<br />R+c1=k Voceros Naturales.</p>
+                            <p className="tituloColumna">Vinculación Ciudadana<br />R+CI=k Voceros <br />Naturales.</p>
                             <p>La vinculación ciudadana activa, la representatividad y el capital político son elementos esenciales para la participación política efectiva, la voz de voceros naturales que representen genuinamente a la comunidad es relevante en el contexto político</p>
                             <a class='animated-arrow' href='./#'>
                                 <span class='the-arrow -left'>
@@ -264,7 +273,7 @@ function InicioComponenete() {
                     <div className="columnBlog">
                         <div className="video-container">
                             <video
-                                src="./img/Bloques/video2.mp4"
+                                src="./img/Bloques/bukele.mp4"
                                 autoPlay
                                 loop
                                 muted

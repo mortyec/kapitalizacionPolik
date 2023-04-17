@@ -239,6 +239,10 @@ select.entrada {
   width: 50%;
 }
 
+.column2 video {
+  width: 100%;
+  height: auto;
+}
 
 
 .iniciotitulo{
