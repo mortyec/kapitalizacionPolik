@@ -288,6 +288,7 @@ function InicioComponenete() {
                                         <label lassName="etiqueta">Parroquia:</label>
                                         <br /><select
                                             name="parroquia"
+                                            type="text"
                                             value={parroquia}
                                             onChange={(e) => setParroquia(e.target.value)}
                                             className="entrada espacioForm"
@@ -318,21 +319,22 @@ function InicioComponenete() {
 
                                         <select
                                             name="genero"
+                                            type="char" 
                                             value={genero}
                                             onChange={(e) => setGenero(e.target.value)}
                                             className="entrada"
                                         >
                                             <option value="">Seleccione</option>
-                                            <option value="masculino">Masculino</option>
-                                            <option value="femenino">Femenino</option>
-                                            <option value="otro">Otro</option>
+                                            <option value="M">Masculino</option>
+                                            <option value="F">Femenino</option>
+                                            <option value="O">Otro</option>
                                         </select>
 
                                         <br />
                                         <label lassName="etiqueta">Edad:</label>
                                         <br /> <input
                                             name="edad"
-                                            type="number"
+                                            type="text"
                                             value={edad}
                                             onChange={(e) => setEdad(e.target.value)}
                                             className="entrada espacioForm"
@@ -348,6 +350,7 @@ function InicioComponenete() {
                                         <label lassName="etiqueta">Cantón:</label>
                                         <br /> <select
                                             name="canton"
+                                            type="text"
                                             value={canton}
                                             onChange={(e) => cambioCanton(e.target.value)}
                                             className="entrada espacioForm"
@@ -371,6 +374,7 @@ function InicioComponenete() {
                                     <label lassName="etiqueta">Problemas:</label>
                                     <textarea
                                         name="problemas"
+                                        type="text"
                                         value={problemas}
                                         onChange={(e) => setProblemas(e.target.value)}
                                         className="entrada doce"
