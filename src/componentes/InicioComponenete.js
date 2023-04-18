@@ -451,9 +451,9 @@ function InicioComponenete() {
                                 src="./img/Bloques/imagen6.jpg"
                                 alt="Imagen 2"
                             />
-                            <div className="overlay">
+                            {/* <div className="overlay">
                                 <p className="textBlog">Descripción 2</p>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

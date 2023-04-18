@@ -1088,8 +1088,7 @@ button[type="submit"]:hover {
   color: #fff;
   transition: color 0.3s ease-in-out;
 }
-
-.image-container:hover .imageBlog {
+/* .image-container:hover .imageBlog {
   transform: scale(1.1);
 }
 
@@ -1099,6 +1098,6 @@ button[type="submit"]:hover {
 
 .image-container:hover .textBlog {
   color: #fff;
-}
+} */
 
 /**/
