@@ -279,9 +279,10 @@ function InicioComponenete() {
                                             onChange={(e) => cambioProvincia(e.target.value)}
                                             className="entrada espacioForm"
                                         >
-                                            <option value="Seleccione">Seleccione</option>
+                                           {/*  <option value="Seleccione">Seleccione</option> */}
+                                            <option value="9">Guayas</option>
                                             {/* Opciones de provincia */}
-                                            {rellenoProvincia}
+                                            {/* {rellenoProvincia} */}
 
                                         </select><br />
                                         <label lassName="etiqueta">Parroquia:</label>
@@ -291,8 +292,9 @@ function InicioComponenete() {
                                             onChange={(e) => setParroquia(e.target.value)}
                                             className="entrada espacioForm"
                                         >
-                                            <option value="">Seleccione</option>
-                                            {rparroquia}
+                                            {/* <option value="">Seleccione</option> */}
+                                            <option value="51">Garcia Moreno</option>
+                                         {/*    {rparroquia} */}
                                             {/* Opciones de parroquia */}
                                         </select><br />
                                         <label lassName="etiqueta">Eje de gestión:</label>
@@ -303,11 +305,11 @@ function InicioComponenete() {
                                             className="entrada espacioForm"
                                         >
                                             <option value="">Seleccione</option>
-                                            <option value="SOCIAL">SOCIAL</option>
-                                            <option value="PRODUCTIVO">PRODUCTIVO</option>
-                                            <option value="SALUD">SALUD</option>
-                                            <option value="EDUCACION">EDUCACION</option>
-                                            <option value="SEGURIDAD">SEGURIDAD</option>
+                                            <option value="2">SOCIAL</option>
+                                            <option value="3">PRODUCTIVO</option>
+                                            <option value="4">SALUD</option>
+                                            <option value="5">EDUCACION</option>
+                                            <option value="1">SEGURIDAD</option>
                                         </select><br />
                                     </div>
                                     <div className="formDerecha">
@@ -350,9 +352,10 @@ function InicioComponenete() {
                                             onChange={(e) => cambioCanton(e.target.value)}
                                             className="entrada espacioForm"
                                         >
-                                            <option value="">Seleccione</option>
+                                            {/* <option value="">Seleccione</option> */}
+                                            <option value="1">Guayaquil</option>
                                             {/* Opciones de cantón */}
-                                            {rcanton}
+                                          {/*   {rcanton} */}
                                         </select><br />
                                         <label lassName="etiqueta">Barrio:</label>
                                         <br /><input
