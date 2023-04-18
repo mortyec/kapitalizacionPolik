@@ -208,7 +208,7 @@ function InicioComponenete() {
                     Tu navegador no soporta la etiqueta de video HTML5.
                 </video> */}
                 <div class="column2">
-                   <p className="textoPrincipal"><strong>El principal</strong> recurso <br/> de un político <br/>son <strong>las personas</strong></p>
+                <img src="./img/Inicio/textoInicio.jpg" />
                 </div>
             </div>
             <div class="contenedor2">
@@ -303,7 +303,11 @@ function InicioComponenete() {
                                             className="entrada espacioForm"
                                         >
                                             <option value="">Seleccione</option>
-                                            {/* Opciones de eje de gestión */}
+                                            <option value="SOCIAL">SOCIAL</option>
+                                            <option value="PRODUCTIVO">PRODUCTIVO</option>
+                                            <option value="SALUD">SALUD</option>
+                                            <option value="EDUCACION">EDUCACION</option>
+                                            <option value="SEGURIDAD">SEGURIDAD</option>
                                         </select><br />
                                     </div>
                                     <div className="formDerecha">
@@ -319,6 +323,7 @@ function InicioComponenete() {
                                             <option value="">Seleccione</option>
                                             <option value="masculino">Masculino</option>
                                             <option value="femenino">Femenino</option>
+                                            <option value="otro">Otro</option>
                                         </select>
 
                                         <br />
@@ -402,7 +407,7 @@ function InicioComponenete() {
                     </div>
                     <div className="columna color3">
                         <div className="espacio">
-                            <p className="tituloColumna">Vinculación Ciudadana<br />R+CI=k<br />Voceros Naturales.</p>
+                            <p className="tituloColumna">Vinculación Ciudadana<br />R+CI=K<br />Voceros Naturales.</p>
                             <p>La vinculación ciudadana activa, la representatividad y el capital político son elementos esenciales para la participación política efectiva, la voz de voceros naturales que representen genuinamente a la comunidad es relevante en el contexto político</p>
                             <a class='animated-arrow' href='./#'>
                                 <span class='the-arrow -left'>
