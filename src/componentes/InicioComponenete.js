@@ -329,6 +329,7 @@ function InicioComponenete() {
                                         <br />
                                         <label lassName="etiqueta">Edad:</label>
                                         <br /> <input
+                                            name="edad"
                                             type="number"
                                             value={edad}
                                             onChange={(e) => setEdad(e.target.value)}
