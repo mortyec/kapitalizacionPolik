@@ -3,6 +3,142 @@ import React, { useState, useRef } from 'react';
 let url = "https://kapitalizacionpolitik.maxapex.net/apex/sgk/api/conexiones/wordpress/WEB"
 
 
+const provincias = ["Pichincha", "Guayas"]
+const ciudadpichincha = ["Cayambe", "Quito"]
+const ciudadguayaquil = ["Duran", "Guayaquil"]
+const parroquiacayambe = ['AYORA', 'CAYAMBE', 'JUAN MONTALVO', 'ASCÁZUBI', 'CANGAHUA ', 'OLMEDO (PESILLO)', 'OTÓN']
+const parroquiaquito = ['QUITO', 'BELISARIO QUEVEDO', 'CARCELÉN', 'CENTRO HISTÓRICO', 'COCHAPAMBA', 'COMITÉ DEL PUEBLO', 'COTOCOLLAO', 'CHILIBULO', 'CHILLOGALLO', 'CHIMBACALLE']
+const parroquiaduran = ['LA MANÁ', 'EL CARMEN', 'LA MANÁ', 'EL TRIUNFO', 'GUASAGANDA (CAB.EN GUASAGANDA CENTRO)', 'PUCAYACU']
+const parroquiaguayaquil = ['BOLÍVAR, CABECERA CANTONAL', 'GARCÍA MORENO', 'LOS ANDES', 'MONTE OLIVO', 'SAN VICENTE DE PUSIR', 'SAN RAFAEL']
+
+
+/*const provincias = {
+    PICHINCHA: {
+        CAYAMBE: ['AYORA',
+            'CAYAMBE',
+            'JUAN MONTALVO',
+            'ASCÁZUBI',
+            'CANGAHUA ',
+            'OLMEDO (PESILLO)',
+            'OTÓN'],
+        QUITO: ['QUITO',
+            'BELISARIO QUEVEDO',
+            'CARCELÉN',
+            'CENTRO HISTÓRICO',
+            'COCHAPAMBA',
+            'COMITÉ DEL PUEBLO',
+            'COTOCOLLAO',
+            'CHILIBULO',
+            'CHILLOGALLO',
+            'CHIMBACALLE']
+    },
+
+    GUAYAS: {
+        DURAN: ['LA MANÁ',
+            'EL CARMEN',
+            'LA MANÁ',
+            'EL TRIUNFO',
+            'GUASAGANDA (CAB.EN GUASAGANDA CENTRO)',
+            'PUCAYACU'],
+        GUAYAQUIL: ['BOLÍVAR, CABECERA CANTONAL',
+            'GARCÍA MORENO',
+            'LOS ANDES',
+            'MONTE OLIVO',
+            'SAN VICENTE DE PUSIR',
+            'SAN RAFAEL']
+
+    }
+}
+*/
+
+/*let rellenoProvincia = function () {
+    let a = ``
+    for (let i = 0; i <= 1; i++) {
+        a += (`<option value=${Object.keys(provincias)[i]}>${Object.keys(provincias)[i]}</option>`);
+    }
+    const elemento = <div dangerouslySetInnerHTML={{ __html: a }} />
+    console.log(a)
+    return (elemento)
+}*/
+
+let rellenoProvincia = provincias.map((p) =>
+    <option value={p}>{p}</option>
+);
+
+let rcanton
+let rparroquia
+
+function rellenoParroquia(a) {
+    switch (a) {
+        case 'Cayambe':
+
+            rparroquia = parroquiacayambe.map((p) =>
+                <option value={p}>{p}</option>
+            );
+
+            break;
+
+        case 'Quito':
+
+            rparroquia = parroquiaquito.map((p) =>
+                <option value={p}>{p}</option>
+            );
+
+            break;
+
+        case 'Duran':
+
+            rparroquia = parroquiaduran.map((p) =>
+                <option value={p}>{p}</option>
+            );
+
+            break;
+
+        case 'Guayaquil':
+
+            rparroquia = parroquiaguayaquil.map((p) =>
+                <option value={p}>{p}</option>
+            );
+
+            break;
+        default:
+            break;
+    }
+
+}
+
+
+
+function rellenoCanton(a) {
+    switch (a) {
+        case 'Pichincha':
+
+            rcanton = ciudadpichincha.map((p) =>
+                <option value={p}>{p}</option>
+            );
+
+            console.log(rcanton)
+            break;
+
+        case 'Guayas':
+
+            rcanton = ciudadguayaquil.map((p) =>
+                <option value={p}>{p}</option>
+            );
+
+            console.log(rcanton)
+            break;
+
+        default:
+            break;
+    }
+
+}
+
+
+let prov = null;
+
+
 function InicioComponenete() {
     const boxMarketingRef = useRef(null);
     const handleVideoClick = () => {
@@ -21,6 +157,17 @@ function InicioComponenete() {
     const [barrio, setBarrio] = useState('');
     const [ejeGestion, setEjeGestion] = useState('');
     const [problemas, setProblemas] = useState('');
+
+
+
+    function cambioProvincia(e) {
+        setProvincia(e)
+        rellenoCanton(e)
+    }
+    function cambioCanton(e) {
+        setCanton(e)
+        rellenoParroquia(e)
+    }
 
     // Función para manejar el envío del formulario
     const handleSubmit = (e) => {
@@ -52,17 +199,17 @@ function InicioComponenete() {
                 <div class="column1">
                     <img src="./img/Inicio/Bukele.jpg" />
                 </div>
-                <video
-                                src="./img/Inicio/inicio.mp4"
-                                autoPlay
-                                loop
-                                muted
-                            >
-                                Tu navegador no soporta la etiqueta de video HTML5.
-                            </video>
-                {/* <div class="column2">
-                   <p className="textoPrincipal">El principal recurso de un politico son las personas</p>
-                </div> */}
+                {/* <video
+                    src="./img/Inicio/inicio.mp4"
+                    autoPlay
+                    loop
+                    muted
+                >
+                    Tu navegador no soporta la etiqueta de video HTML5.
+                </video> */}
+                <div class="column2">
+                   <p className="textoPrincipal"><strong>El principal</strong> recurso <br/> de un político <br/>son <strong>las personas</strong></p>
+                </div>
             </div>
             <div class="contenedor2">
             
@@ -98,7 +245,7 @@ function InicioComponenete() {
                     <div className="columna color1 centrado">
                         <div className="espacioFormu">
                             <form action={url} method="post" onSubmit={(ev) => handleSubmit(ev)} className="formulario">
-                                <h2>Formulario</h2>
+                                <h2>Cuentame tu necesidad</h2>
                                 <div className="contenedorFilasFormulario">
                                     <div className="formizquierda">
                                         <label lassName="etiqueta">Cédula:</label>
@@ -126,14 +273,16 @@ function InicioComponenete() {
                                             className="entrada espacioForm"
                                         /><br />
                                         <label lassName="etiqueta">Provincia:</label>
-                                        <br /><select
+                                        <br /> <select
                                             name="provincia"
                                             value={provincia}
-                                            onChange={(e) => setProvincia(e.target.value)}
+                                            onChange={(e) => cambioProvincia(e.target.value)}
                                             className="entrada espacioForm"
                                         >
-                                            <option value="">Seleccione</option>
+                                            <option value="Seleccione">Seleccione</option>
                                             {/* Opciones de provincia */}
+                                            {rellenoProvincia}
+
                                         </select><br />
                                         <label lassName="etiqueta">Parroquia:</label>
                                         <br /><select
@@ -143,6 +292,7 @@ function InicioComponenete() {
                                             className="entrada espacioForm"
                                         >
                                             <option value="">Seleccione</option>
+                                            {rparroquia}
                                             {/* Opciones de parroquia */}
                                         </select><br />
                                         <label lassName="etiqueta">Eje de gestión:</label>
@@ -159,6 +309,7 @@ function InicioComponenete() {
                                     <div className="formDerecha">
                                         <label lassName="etiqueta">Género:</label>
                                         <br />
+
                                         <select
                                             name="genero"
                                             value={genero}
@@ -168,7 +319,9 @@ function InicioComponenete() {
                                             <option value="">Seleccione</option>
                                             <option value="masculino">Masculino</option>
                                             <option value="femenino">Femenino</option>
-                                        </select><br />
+                                        </select>
+
+                                        <br />
                                         <label lassName="etiqueta">Edad:</label>
                                         <br /> <input
                                             type="number"
@@ -188,11 +341,12 @@ function InicioComponenete() {
                                         <br /> <select
                                             name="canton"
                                             value={canton}
-                                            onChange={(e) => setCanton(e.target.value)}
+                                            onChange={(e) => cambioCanton(e.target.value)}
                                             className="entrada espacioForm"
                                         >
                                             <option value="">Seleccione</option>
                                             {/* Opciones de cantón */}
+                                            {rcanton}
                                         </select><br />
                                         <label lassName="etiqueta">Barrio:</label>
                                         <br /><input
@@ -227,14 +381,14 @@ function InicioComponenete() {
                                 <span class='the-arrowDos -leftDos'>
                                     <span class='shaftDos'></span>
                                 </span>
-                                <span class='mainDos'>
+                               {/*  <span class='mainDos'>
                                     <span class='textDos'>
                                         Conoce más
                                     </span>
                                     <span class='the-arrowDos -rightDos'>
                                         <span class='shaftDos'></span>
                                     </span>
-                                </span>
+                                </span> */}
                             </a>
                         </div>
                     </div>
@@ -248,20 +402,20 @@ function InicioComponenete() {
                     </div>
                     <div className="columna color3">
                         <div className="espacio">
-                            <p className="tituloColumna">Vinculación Ciudadana<br />R+CI=k Voceros <br />Naturales.</p>
+                            <p className="tituloColumna">Vinculación Ciudadana<br />R+CI=k<br />Voceros Naturales.</p>
                             <p>La vinculación ciudadana activa, la representatividad y el capital político son elementos esenciales para la participación política efectiva, la voz de voceros naturales que representen genuinamente a la comunidad es relevante en el contexto político</p>
                             <a class='animated-arrow' href='./#'>
                                 <span class='the-arrow -left'>
                                     <span class='shaft'></span>
                                 </span>
-                                <span class='main'>
+                               {/*  <span class='main'>
                                     <span class='text'>
                                         Aprende más
                                     </span>
                                     <span class='the-arrow -right'>
                                         <span class='shaft'></span>
                                     </span>
-                                </span>
+                                </span> */}
                             </a>
                         </div>
                     </div>
@@ -273,7 +427,7 @@ function InicioComponenete() {
                     <div className="columnBlog">
                         <div className="video-container">
                             <video
-                                src="./img/Bloques/bukele.mp4"
+                                src="./img/Bloques/videoCorrea.mp4"
                                 autoPlay
                                 loop
                                 muted

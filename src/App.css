@@ -236,14 +236,21 @@ select.entrada {
 }
 
 .column2 {
+  background-image: url(../public/img/Bloques/kFondo.png);
+  background-size: cover;
+  display: flex;
   width: 50%;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
 }
 
-.column2 video {
-  width: 100%;
-  height: auto;
+.column2 .textoPrincipal{
+  font-family: sans-serif;
+  font-style: italic;
+  color: #134c9a;
+  font-size: 3.7rem;
 }
-
 
 .iniciotitulo{
   font-family: 'PyIta', sans-serif;
@@ -268,9 +275,8 @@ select.entrada {
   width: 42vw;
 }
 
-/* Estilo del contenedor */
 .contenedor2 {
-  background-color: #031725;
+  background-image: linear-gradient(to right,#051c2c ,#04143a);
   height: 15vh;
   display: flex;
 }
@@ -325,6 +331,10 @@ select.entrada {
   gap: 0rem; /* Espacio entre filas */
 }
 
+.espacio{
+  margin: 0 10%;
+}
+
 .fila {
   display: flex;
 }
@@ -363,9 +373,8 @@ select.entrada {
 .columna.color3{
   display: flex;
   background-color: #f0f0f0;
-  align-items: center;
-  justify-content: center;
-  margin-left: 2%;
+  flex-direction: column;
+  justify-content: center !important;
 }
 
 
@@ -1051,11 +1060,13 @@ button[type="submit"]:hover {
   height: 35vw;
 }
 
-.video-container video{
-  position: relative;
-  overflow: hidden;
+.video-container{
   width: 100%;
-  height: 35vw;
+  background-color: #041235;
+}
+
+.video-container video{
+  width: 100%;
 }
 
 .imageBlog {
@@ -1069,7 +1080,7 @@ button[type="submit"]:hover {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
+  /* width: 100%; */
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.8);
   opacity: 0;

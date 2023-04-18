@@ -5,7 +5,7 @@ function FooterComponente() {
     <>
      <footer class="site-footer">
       <div class="containerfooter">
-        <img src="./img/Navbar/logoPrueba.png"/>
+        <img src="./img/Navbar/logoNuevo.png"/>
           {/* <div class="row">
             <div class="col-sm-12 col-md-6">
               <h6>Acerca De</h6>
