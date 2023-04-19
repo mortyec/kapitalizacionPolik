@@ -208,11 +208,11 @@ function InicioComponenete() {
                     Tu navegador no soporta la etiqueta de video HTML5.
                 </video> */}
                 <div class="column2">
-                <img src="./img/Inicio/textoInicio.jpg" />
+                    <img src="./img/Inicio/textoInicio.jpg" />
                 </div>
             </div>
             <div class="contenedor2">
-            
+
                 {/* <div class="parteMenos">
                     <div class="descripcionInicio">PERSPECTIVAS DE TENDENCIA</div>
                 </div>
@@ -279,7 +279,7 @@ function InicioComponenete() {
                                             onChange={(e) => cambioProvincia(e.target.value)}
                                             className="entrada espacioForm"
                                         >
-                                           {/*  <option value="Seleccione">Seleccione</option> */}
+                                            {/*  <option value="Seleccione">Seleccione</option> */}
                                             <option value="22">Guayas</option>
                                             {/* Opciones de provincia */}
                                             {/* {rellenoProvincia} */}
@@ -295,7 +295,7 @@ function InicioComponenete() {
                                         >
                                             {/* <option value="">Seleccione</option> */}
                                             <option value="1369">Garcia Moreno</option>
-                                         {/*    {rparroquia} */}
+                                            {/*    {rparroquia} */}
                                             {/* Opciones de parroquia */}
                                         </select><br />
                                         <label lassName="etiqueta">Eje de gestión:</label>
@@ -319,7 +319,7 @@ function InicioComponenete() {
 
                                         <select
                                             name="genero"
-                                            type="char" 
+                                            type="char"
                                             value={genero}
                                             onChange={(e) => setGenero(e.target.value)}
                                             className="entrada"
@@ -358,7 +358,7 @@ function InicioComponenete() {
                                             {/* <option value="">Seleccione</option> */}
                                             <option value="44">Guayaquil</option>
                                             {/* Opciones de cantón */}
-                                          {/*   {rcanton} */}
+                                            {/*   {rcanton} */}
                                         </select><br />
                                         <label lassName="etiqueta">Barrio:</label>
                                         <br /><input
@@ -394,7 +394,7 @@ function InicioComponenete() {
                                 <span class='the-arrowDos -leftDos'>
                                     <span class='shaftDos'></span>
                                 </span>
-                               {/*  <span class='mainDos'>
+                                {/*  <span class='mainDos'>
                                     <span class='textDos'>
                                         Conoce más
                                     </span>
@@ -421,7 +421,7 @@ function InicioComponenete() {
                                 <span class='the-arrow -left'>
                                     <span class='shaft'></span>
                                 </span>
-                               {/*  <span class='main'>
+                                {/*  <span class='main'>
                                     <span class='text'>
                                         Aprende más
                                     </span>
