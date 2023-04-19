@@ -280,7 +280,7 @@ function InicioComponenete() {
                                             className="entrada espacioForm"
                                         >
                                            {/*  <option value="Seleccione">Seleccione</option> */}
-                                            <option value="9">Guayas</option>
+                                            <option value="22">Guayas</option>
                                             {/* Opciones de provincia */}
                                             {/* {rellenoProvincia} */}
 
@@ -294,7 +294,7 @@ function InicioComponenete() {
                                             className="entrada espacioForm"
                                         >
                                             {/* <option value="">Seleccione</option> */}
-                                            <option value="51">Garcia Moreno</option>
+                                            <option value="1369">Garcia Moreno</option>
                                          {/*    {rparroquia} */}
                                             {/* Opciones de parroquia */}
                                         </select><br />
@@ -356,7 +356,7 @@ function InicioComponenete() {
                                             className="entrada espacioForm"
                                         >
                                             {/* <option value="">Seleccione</option> */}
-                                            <option value="1">Guayaquil</option>
+                                            <option value="44">Guayaquil</option>
                                             {/* Opciones de cantón */}
                                           {/*   {rcanton} */}
                                         </select><br />
