@@ -197,7 +197,7 @@ function Formulario() {
         <>
         <div className="espacioFormu">
                             <form action={url} method="post" onSubmit={(ev) => handleSubmit(ev)} className="formulario">
-                                <h2>Cuéntame tu necesidad</h2>
+                                <h2>Cuéntame tu necesidad 6</h2>
                                 <div className="contenedorFilasFormulario">
                                     <div className="formizquierda">
                                         <label lassName="etiqueta">Cédula:</label>
